@@ -1,66 +1,82 @@
+<style>
+	*{
+		font-family: "Helvetica";
+		padding: 0;
+		margin: 0;
+		font-size: 14;
+	}
+
+	.lista{ margin: 10px }
+
+	.lista img{ display: block; margin: 5px 0px }
+
+	.lista li{
+		margin: 0px;
+		background-color: #ddd;
+		display: inline-block;
+		padding: 10px;
+		border: solid 1px #ccc;
+	}
+
+	.pesquisa{
+		padding: 10px;
+		margin: 10px;
+	}
+
+	pre{
+		font-family: monospace;
+		margin: 10px;
+	}
+
+	pre > span{color: orangered;font-family: monospace;}
+</style>
+
 <div>
-	<input type='text' id='fin'>
-
-	<ul id='rfin'>
-
-		<li>Alabama</li>
-		<li>Alaska</li>
-		<li>Arizona</li>
-		<li>Arkansas</li>
-		<li>California</li>
-		<li>Colorado</li>
-		<li>Connecticut</li>
-		<li>Delaware</li>
-		<li>District_of_Columbia</li>
-		<li>Florida</li>
-		<li>Georgia</li>
-		<li>Hawaii</li>
-		<li>Idaho</li>
-		<li>Illinois</li>
-		<li>Indiana</li>
-		<li>Iowa</li>
-		<li>Kansas</li>
-		<li>Kentucky</li>
-		<li>Louisiana</li>
-		<li>Maine</li>
-		<li>Maryland</li>
-		<li>Massachusetts</li>
-		<li>Michigan</li>
-		<li>Minnesota</li>
-		<li>Mississippi</li>
-		<li>Missouri</li>
-		<li>Montana</li>
-		<li>Nebraska</li>
-		<li>Nevada</li>
-		<li>New_Hampshire</li>
-		<li>New_Jersey</li>
-		<li>New_Mexico</li>
-		<li>New_York</li>
-		<li>North_Carolina</li>
-		<li>North_Dakota</li>
-		<li>Ohio</li>
-		<li>Oklahoma</li>
-		<li>Oregon</li>
-		<li>Pennsylvania</li>
-		<li>Rhode_Island</li>
-		<li>South_Carolina</li>
-		<li>South_Dakota</li>
-		<li>Tennessee</li>
-		<li>Texas</li>
-		<li>Utah</li>
-		<li>Vermont</li>
-		<li>Virginia</li>
-		<li>Washington</li>
-		<li>West_Virginia</li>
-		<li>Wisconsin</li>
-		<li>Wyoming</li>
-
-
-
+	<input class="pesquisa">
+	<ul class="lista">
+		<li nome="cachorro"><img src="imgs/cachorro.jpg"> Cachorro</li>
+		<li nome="cavalo"><img src="imgs/cavalo.jpg"> Cavalo</li>
+		<li nome="coelho"><img src="imgs/coelho.jpg"> Coelho</li>
+		<li nome="gato"><img src="imgs/gato.jpg"> Gato</li>
+		<li nome="passaro"><img src="imgs/passaro.jpg"> Pássaro</li>
+		<li nome="peixe"><img src="imgs/peixe.jpg"> Peixe</li>
+		<li nome="tigre"><img src="imgs/tigre.jpg"> Tigre</li>
 	</ul>
-
 </div>
+<hr>
+<pre>
 
+Busca HTML simples
 
+1. Baixe o arquivo <a download href='sistema_de_busca.js'>aqui</a>.
 
-<script src="js.js"></script>
+2. Crie um input com o nome da class de "pesquisa".
+&lt;input <span>class="pesquisa"</span>>
+
+3. Crie uma lista com o nome de "lista", não precisa ser necessariamente um ul, pode ser uma div.
+&lt;ul <span>class="lista"</span>>&lt;/ul>
+
+4. Em cada elemento dentro da lista ponha um atributo chamado nome.
+&lt;li <span>nome="coelho"</span>> &lt;img src="imgs/coelho.jpg"> Coelho &lt;/li>
+&lt;li <span>nome="cavalo"</span>> &lt;img src="imgs/coelho.jpg"> Coelho &lt;/li>
+
+5. Jogue toda estrutura criada acima para dentro de uma div.
+
+6. Insira o js pra dentro.
+&lt;script src="sistema_de_busca.js">&lt;/script>
+
+7. O arquivo final ficará mais ou menos assim.
+
+&ltdiv>
+  &lt;input class="pesquisa">
+  &ltul>
+    &ltli nome="coelho">Coelho&lt/li>
+    &ltli nome="cavalo">Cavalo&lt/li>
+  &lt/ul>
+&lt/div>
+
+&lt;script src="sistema_de_busca.js">&lt;/script>
+
+</pre>
+
+<script src="sistema_de_busca.js"></script>

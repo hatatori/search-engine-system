@@ -1,27 +1,15 @@
 <style>
 	*{
-		font-family: "Helvetica";
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 		padding: 0;
 		margin: 0;
 		font-size: 14;
 	}
 
-	.lista{ margin: 10px }
-
-	.lista img{ display: block; margin: 5px 0px }
-
-	.lista li{
-		margin: 0px;
+	.lista div{
 		display: inline-block;
-		padding: 10px;
+		margin:10px
 	}
-
-	.pesquisa{
-		padding: 10px;
-		margin: 10px;
-	}
-
-	.h-100-p{height: 100%;}
 
 	pre{
 		font-family: monospace;
@@ -29,65 +17,76 @@
 	}
 
 	pre > span{color: orangered;font-family: monospace;}
+
+	input{
+		padding:10px;
+		margin: 10px;
+	}
 </style>
 
 <meta name="viewport" content="width=device-width, user-scalable=no">
 
-<div class="h-100-p">
-	<input class="pesquisa" placeholder="Escreva aqui">
-	<ul class="lista">
-		<li nome="cachorro"><img src="imgs/cachorro.jpg"> Cachorro</li>
-		<li nome="cavalo"><img src="imgs/cavalo.jpg"> Cavalo</li>
-		<li nome="coelho"><img src="imgs/coelho.jpg"> Coelho</li>
-		<li nome="gato"><img src="imgs/gato.jpg"> Gato</li>
-		<li nome="passaro"><img src="imgs/passaro.jpg"> Pássaro</li>
-		<li nome="peixe"><img src="imgs/peixe.jpg"> Peixe</li>
-		<li nome="tigre"><img src="imgs/tigre.jpg"> Tigre</li>
-		<li nome="aranha"><img src="imgs/aranha.jpg"> Aranha</li>
-		<li nome="urso"><img src="imgs/urso.jpg"> Urso</li>
-		<li nome="sapo"><img src="imgs/sapo.jpg"> Sapo</li>
-		<li nome="rato"><img src="imgs/rato.jpg"> Rato</li>
-		<li nome="tartaruga"><img src="imgs/tartaruga.jpg"> Tartaruga</li>
-		<li nome="mico"><img src="imgs/mico.jpg"> Mico</li>
-		<li nome="furao"><img src="imgs/furao.jpg"> Furao</li>
-		<li nome="chinchila"><img src="imgs/chinchila.jpg"> Chinchila</li>
-		<li nome="esquilo"><img src="imgs/esquilo.jpg"> Esquilo</li>
+<input class="pesquisa" placeholder="Escreva aqui" search="animais">
 
-	</ul>
+<div class="lista" id="animais">
+	<div nome="cachorro"><img src="imgs/cachorro.jpg"> <p>Cachorro</p></div>
+	<div nome="cavalo"><img src="imgs/cavalo.jpg"> <p>Cavalo</p></div>
+	<div nome="coelho"><img src="imgs/coelho.jpg"> <p>Coelho</p></div>
+	<div nome="gato"><img src="imgs/gato.jpg"> <p>Gato</p></div>
+	<div nome="passaro"><img src="imgs/passaro.jpg"> <p>Pássaro</p></div>
+	<div nome="peixe"><img src="imgs/peixe.jpg"> <p>Peixe</p></div>
+	<div nome="tigre"><img src="imgs/tigre.jpg"> <p>Tigre</p></div>
+	<div nome="aranha"><img src="imgs/aranha.jpg"> <p>Aranha</p></div>
+	<div nome="urso"><img src="imgs/urso.jpg"> <p>Urso</p></div>
+	<div nome="sapo"><img src="imgs/sapo.jpg"> <p>Sapo</p></div>
+	<div nome="rato"><img src="imgs/rato.jpg"> <p>Rato</p></div>
+	<div nome="tartaruga"><img src="imgs/tartaruga.jpg"> <p>Tartaruga</p></div>
+	<div nome="mico"><img src="imgs/mico.jpg"> <p>Mico</p></div>
+	<div nome="furao"><img src="imgs/furao.jpg"> <p>Furao</p></div>
+	<div nome="chinchila"><img src="imgs/chinchila.jpg"> <p>Chinchila</p></div>
+	<div nome="esquilo"><img src="imgs/esquilo.jpg"> <p>Esquilo</p></div>
 </div>
-<hr>
+
+
 <pre>
 
 Busca HTML simples
 
-1. Baixe o arquivo <a download href='sistema_de_busca.js'>aqui</a>.
+1. Adicione o script
 
-2. Crie um input com o nome da class de "pesquisa".
-&lt;input <span>class="pesquisa"</span>>
+&lt;script src="sistema_de_busca.js&lt;/script>
+&lt;script src="https://hatatori.github.io/search-engine-system/sistema_de_busca.js&lt;/script>
 
-3. Crie uma lista com o nome de "lista", não precisa ser necessariamente um ul, pode ser uma div.
-&lt;ul <span>class="lista"</span>>&lt;/ul>
 
-4. Em cada elemento dentro da lista ponha um atributo chamado nome.
-&lt;li <span>nome="coelho"</span>> &lt;img src="imgs/coelho.jpg"> Coelho &lt;/li>
-&lt;li <span>nome="cavalo"</span>> &lt;img src="imgs/coelho.jpg"> Coelho &lt;/li>
+2. Crie um input com o nome da atributo <span>search</span> e ponha o valor da lista referente
 
-5. Jogue toda estrutura criada acima para dentro de uma div.
+&lt;input <span>search</span>="animallist">
 
-6. Insira o js pra dentro.
+
+3. O nome do id da tag tem que o ser o mesmo que está contido dentro de search do input. Os elementos devem conter um atributo nome.
+
+&lt;div id="animallist">
+&lt;div <span>nome="coelho"</span>> Coelho &lt;/div>
+&lt;div <span>nome="cavalo"</span>> cavalo &lt;/div>
+&lt;/div>
+
+
+5. HTML da página abaixo ou <a href='test.html'>Página de teste</a>
+
+&lt;input search="animals">
+
+&lt;ul id="animals">
+    &lt;li nome="cachorro">Cachorro&lt;/li>
+    &lt;li nome="cavalo">Cavalo&lt;/li>
+    &lt;li nome="coelho">Coelho&lt;/li>
+    &lt;li nome="gato">Gato&lt;/li>
+    &lt;li nome="passaro">Pássaro&lt;/li>
+    &lt;li nome="peixe">Peixe&lt;/li>
+    &lt;li nome="tigre">Tigre&lt;/li>
+&lt;/ul>
+
 &lt;script src="sistema_de_busca.js">&lt;/script>
 
-7. O arquivo final ficará mais ou menos assim.
-
-&ltdiv>
-	&lt;input class="pesquisa">
-	&ltul>
-		&ltli nome="coelho">Coelho&lt/li>
-		&ltli nome="cavalo">Cavalo&lt/li>
-	&lt/ul>
-&lt/div>
-
-&lt;script src="sistema_de_busca.js">&lt;/script>
 
 </pre>
 

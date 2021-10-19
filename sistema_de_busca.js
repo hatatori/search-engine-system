@@ -1,19 +1,17 @@
-pesquisa_input = document.querySelectorAll(".pesquisa");
+for(i of document.querySelectorAll('[search]')){
+    try{
+        busca(i,document.querySelector("#"+i.getAttribute('search')))
+    }catch(e){}
+}
 
-	for(i in pesquisa_input){
-		
-			pesquisa_input[i].onkeyup=function(e){
-
-				reg = new RegExp(this.value.toLowerCase(),"g")
-				lis = this.parentElement.querySelector(".lista")
-
-				console.log(lis)
-
-				for(j of lis.children){
-					if( !j.getAttribute("nome").match(reg) )
-						j.style.display="none"
-					else
-						j.removeAttribute("style")
-				}
-			}
-	}
+function busca(input_field,div){
+    input_field.onkeyup=function(e){
+        for(di of div.children){
+            r  = new RegExp(this.value,"g")
+            if(di.getAttribute("nome").toLowerCase().match(r) != null)
+                di.style.removeProperty('display')
+            else
+                di.style.display = "none"
+        }
+    }
+}n
